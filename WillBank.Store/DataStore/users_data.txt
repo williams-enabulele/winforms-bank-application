@@ -1,17 +1,20 @@
-{
-  "Id": "c247862d-d463-452c-afd7-ff60dd4cb982",
-  "Email": "enabsdigital@gmail.com",
-  "Hash": "bl0nu97IWIxLdjCEZE1RbRqiGehzrNDxiJU/\u002BKka/4o=",
-  "userType": 1,
-  "Salt": "WHsAxSlO3WN1okrq35p\u002B1gH2A6E=",
-  "CreatedAt": "2021-07-28T14:34:10.28191+01:00",
-  "UpdatedAt": "2021-07-28T14:34:10.2862875+01:00"
-}{
-  "Id": "14e46c97-b707-451a-b862-e3c89c7d96c2",
-  "Email": "enabsdigital@gmail.com",
-  "Hash": "VLrCHIgzQkIqkqbEMiJhMyjtz77UjiL8RTDJjH1oRno=",
-  "userType": 1,
-  "Salt": "noO7/uDOeDocYXUZuLvQiVVVHI4=",
-  "CreatedAt": "2021-07-28T14:35:05.2913255+01:00",
-  "UpdatedAt": "2021-07-28T14:35:05.2913365+01:00"
-}
+[
+  {
+    "Id": "00260855-25f1-4ac0-a0fd-05ffe3fd98d1",
+    "Email": "hope@gmail.com",
+    "Hash": "cT0HBzuj/1J7BhvgPB1I\u002Bauqi2RsuNVRMdSE1gbnqfI=",
+    "userType": 1,
+    "Salt": "r9PEXtsSRbCEXPCJtSddfWooBoo=",
+    "CreatedAt": "2021-07-28T16:23:06.9750149+01:00",
+    "UpdatedAt": "2021-07-28T16:23:06.9783396+01:00"
+  },
+  {
+    "Id": "326babdc-970a-4bfd-9fd4-83ce04715603",
+    "Email": "house@gmail.com",
+    "Hash": "nhRjg9nmJL4cN2Q1e6Uy\u002BaHzPhL43La9TzZjlesJfjo=",
+    "userType": 1,
+    "Salt": "jqb81NdHgZTRyIB4cTzMBxBiRg0=",
+    "CreatedAt": "2021-07-28T16:44:01.7930369+01:00",
+    "UpdatedAt": "2021-07-28T16:44:01.7989681+01:00"
+  }
+]

@@ -31,23 +31,39 @@ namespace WillBank.Core
             if (customer != null && !string.IsNullOrWhiteSpace(password))
             {
 
-                string userPath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\users_data.txt";
-                string userProfilePath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\users_profile_data.txt";
+                string userPath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\users_data.json";
+                string userProfilePath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\users_profile_data.json";
+
+               
 
                 try
                 {
-                    var jsonUserData = File.ReadAllText(userPath);
-                    var userList = JsonSerializer.Deserialize<List<User>>(jsonUserData);
-                   foreach (var item in userList)
-                            {
 
+                    // Get Records
+                    var openUserFile = File.ReadAllText(userPath);
+                    var userObj = JsonSerializer.Deserialize<List<User>>(openUserFile);
+                    foreach (var user in userObj)
+                    {
+                        DataStore.authUser.Add(user);
+                    }
+                    var openUserProfileFile = File.ReadAllText(userProfilePath);
+                    var userProfileObj = JsonSerializer.Deserialize<List<UserProfile>>(openUserProfileFile);
+                    foreach (var userData in userProfileObj)
+                    {
+                        DataStore.userProfiles.Add(userData);
+                    }
+              
+                   // Check for Email Duplicates
+                    var userList = JsonSerializer.Deserialize<List<User>>(openUserFile);
+                    foreach (var item in userList)
+                     {
                                 if (item.Email == customer.Email)
                                 {
                             return false;
 
                                 }
-                            }     
-                    }
+                     }     
+                }
 
                 catch (Exception)
                 {
@@ -72,11 +88,11 @@ namespace WillBank.Core
                    
                        
                     var options = new JsonSerializerOptions { WriteIndented = true, AllowTrailingCommas = true, IgnoreNullValues = true };
-                    string userData = JsonSerializer.Serialize(customer, options);
+                    string userData = JsonSerializer.Serialize(DataStore.authUser, options);
             
-                    File.AppendAllText(userPath, userData);
-                    string userProfileData = JsonSerializer.Serialize(userProfile, options);
-                    File.AppendAllText(userProfilePath, userProfileData);
+                    File.WriteAllText(userPath,userData);
+                    string userProfileData = JsonSerializer.Serialize(DataStore.userProfiles, options);
+                    File.WriteAllText(userProfilePath, userProfileData);
                     return true;
                 }
 

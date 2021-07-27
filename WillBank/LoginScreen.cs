@@ -56,9 +56,9 @@ namespace WillBank
         private void btnMainLogin_Click(object sender, System.EventArgs e)
         {
             AuthenticationRepository authenticationRepository = new AuthenticationRepository();
-            var result = authenticationRepository.LoginAsync(txtEmail.Text, txtPassword.Text);
+            var result = authenticationRepository.Login(txtEmail.Text, txtPassword.Text);
 
-            if (result.IsCompleted == true)
+            if (result == true)
             {
                 UserBackEnd userBackEnd = new UserBackEnd();
                 userBackEnd.Show();

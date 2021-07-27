@@ -7,7 +7,7 @@ namespace WillBank.Core
 {
     public interface IAuthenticationRepository
     {
-     Task<bool> LoginAsync(string email, string password);
+    bool Login(string email, string password);
 
     }
 }
