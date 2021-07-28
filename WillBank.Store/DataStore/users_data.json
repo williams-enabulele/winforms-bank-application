@@ -1,0 +1,19 @@
+
+  {
+    "Id": "b1503b55-a2d3-47e9-8a07-e5aff0f6c6fe",
+    "Email": "john@gmail.com",
+    "Hash": "VTjxuDr6ALrMmcfnTQcSgSjOpbMKCZKHPH7cyay2rSI=",
+    "userType": 1,
+    "Salt": "uWW3Ps\u002BssH5/LerkAxLGPGAO0qM=",
+    "CreatedAt": "2021-07-28T12:36:37.3942144+01:00",
+    "UpdatedAt": "2021-07-28T12:36:37.3970977+01:00"
+  },
+{
+  "Id": "6f263e29-5dd3-4c0f-8ae6-bc66a4ec4f85",
+  "Email": "enabsdigital@gmail.com",
+  "Hash": "mnj\u002BueTBOt9UyaiT9hLhrECX6NnlRatEfrwebQ1wiwo=",
+  "userType": 1,
+  "Salt": "AyRJIQi4xGSF2SbFAkTaA9dT1WA=",
+  "CreatedAt": "2021-07-28T14:03:10.6280049+01:00",
+  "UpdatedAt": "2021-07-28T14:03:10.6309611+01:00"
+}

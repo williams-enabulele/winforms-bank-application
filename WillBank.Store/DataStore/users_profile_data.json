@@ -1,0 +1,86 @@
+[{
+
+  "FirstName": "klop",
+  "LastName": "hy",
+  "Id": "838b7e8d-2a0c-4c66-9a79-bc067e3f74a5",
+  "Email": "e@gmail.com",
+  "Hash": null,
+  "userType": 0,
+  "Salt": null,
+  "CreatedAt": "2021-07-28T09:13:19.3855817+01:00",
+  "UpdatedAt": "2021-07-28T09:13:19.3855829+01:00"
+} {
+  "FirstName": "Williams",
+  "LastName": "Enabulele",
+  "Id": "fe55eb3b-1cbe-48dc-9cd8-14b19941fa3b",
+  "Email": "enabsdigital@gmail.com",
+  "Hash": null,
+  "userType": 0,
+  "Salt": null,
+  "CreatedAt": "2021-07-28T09:15:13.6343308+01:00",
+  "UpdatedAt": "2021-07-28T09:15:13.6343319+01:00"
+} {
+  "FirstName": "Robogs",
+  "LastName": "Tach",
+  "Id": "7c3cb01f-92ca-4a78-bfed-079ed554243f",
+  "Email": "kk@gmail.com",
+  "Hash": null,
+  "userType": 0,
+  "Salt": null,
+  "CreatedAt": "2021-07-28T09:16:04.1783473+01:00",
+  "UpdatedAt": "2021-07-28T09:16:04.1783493+01:00"
+} {
+  "FirstName": "Para",
+  "LastName": "Para",
+  "Id": "91401e38-a881-4895-877e-633e641277af",
+  "Email": "j@gmail.com",
+  "Hash": null,
+  "userType": 0,
+  "Salt": null,
+  "CreatedAt": "2021-07-28T09:33:26.6376516+01:00",
+  "UpdatedAt": "2021-07-28T09:33:26.6376527+01:00"
+} {
+  "FirstName": "paia",
+  "LastName": "jkdj",
+  "Id": "a9e024e6-cf11-4ab8-8edd-090506c6c6f6",
+  "Email": "t@gmail.com",
+  "Hash": null,
+  "userType": 0,
+  "Salt": null,
+  "CreatedAt": "2021-07-28T09:45:44.1572951+01:00",
+  "UpdatedAt": "2021-07-28T09:45:44.1572992+01:00"
+}
+
+]{
+  "FirstName": "Williams",
+  "LastName": "Enabulele",
+  "Id": "b1503b55-a2d3-47e9-8a07-e5aff0f6c6fe",
+  "Email": "john@gmail.com",
+  "userType": 1,
+  "CreatedAt": "2021-07-28T12:36:37.3973358+01:00",
+  "UpdatedAt": "2021-07-28T12:36:37.397337+01:00"
+}{
+  "FirstName": "Williams",
+  "LastName": "Enabulele",
+  "Id": "3362bf21-bfb7-44c4-bfac-12b71b1cb201",
+  "Email": "love@gmail.com",
+  "userType": 1,
+  "CreatedAt": "2021-07-28T12:37:02.3469927+01:00",
+  "UpdatedAt": "2021-07-28T12:37:02.3469931+01:00"
+},{
+  "FirstName": "Williams",
+  "LastName": "Enabulele",
+  "Id": "deed6ef2-9dbb-4444-9b34-e56bcd6fc222",
+  "Email": "pace@gmail.com",
+  "userType": 1,
+  "CreatedAt": "2021-07-28T12:39:31.0984425+01:00",
+  "UpdatedAt": "2021-07-28T12:39:31.0984437+01:00"
+}{
+  "FirstName": "Williams",
+  "LastName": "Enabulele",
+  "Id": "6f263e29-5dd3-4c0f-8ae6-bc66a4ec4f85",
+  "Email": "enabsdigital@gmail.com",
+  "userType": 1,
+  "CreatedAt": "2021-07-28T14:03:10.6311995+01:00",
+  "UpdatedAt": "2021-07-28T14:03:10.6312007+01:00"
+}
