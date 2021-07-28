@@ -8,7 +8,5 @@ namespace WillBank.Model
         public string LastName { get; set; }
 
         public List<Account> accountList = new();
-
-        
     }
 }

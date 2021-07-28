@@ -31,10 +31,10 @@ namespace WillBank
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDeposit = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSelectAccount = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,10 +43,10 @@ namespace WillBank
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnDeposit);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.comboBoxSelectAccount);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtAmount);
             this.panel1.Location = new System.Drawing.Point(75, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(660, 416);
@@ -64,14 +64,16 @@ namespace WillBank
             this.btnDeposit.TabIndex = 13;
             this.btnDeposit.Text = "Deposit";
             this.btnDeposit.UseVisualStyleBackColor = false;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
-            // comboBox1
+            // comboBoxSelectAccount
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 132);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(377, 23);
-            this.comboBox1.TabIndex = 7;
+            this.comboBoxSelectAccount.FormattingEnabled = true;
+            this.comboBoxSelectAccount.Location = new System.Drawing.Point(146, 132);
+            this.comboBoxSelectAccount.Name = "comboBoxSelectAccount";
+            this.comboBoxSelectAccount.Size = new System.Drawing.Size(377, 23);
+            this.comboBoxSelectAccount.TabIndex = 7;
+            this.comboBoxSelectAccount.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -93,14 +95,14 @@ namespace WillBank
             this.label1.TabIndex = 8;
             this.label1.Text = "Select Account";
             // 
-            // textBox1
+            // txtAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 193);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 42);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Text = "0.00";
+            this.txtAmount.Location = new System.Drawing.Point(146, 193);
+            this.txtAmount.Multiline = true;
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(377, 42);
+            this.txtAmount.TabIndex = 9;
+            this.txtAmount.Text = "0.00";
             // 
             // UserControlDeposit
             // 
@@ -120,9 +122,9 @@ namespace WillBank
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDeposit;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxSelectAccount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAmount;
     }
 }

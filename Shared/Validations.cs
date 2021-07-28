@@ -46,7 +46,7 @@ namespace Shared
         public static bool IsValidNumber(string number)
         {
             var num = new Regex(@"[0-9]");
-            if (num.IsMatch(number)== true)
+            if (num.IsMatch(number) == true)
             {
                 return true;
             }

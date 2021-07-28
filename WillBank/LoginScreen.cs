@@ -12,7 +12,6 @@ namespace WillBank
 
         private void SideLogo_Click(object sender, System.EventArgs e)
         {
-
         }
 
         private void btnLogin_Click(object sender, System.EventArgs e)
@@ -20,7 +19,6 @@ namespace WillBank
             RegisterScreen registerScreen = new RegisterScreen();
             registerScreen.Show();
             this.Hide();
-
         }
 
         private void txtEmail_Validating(object sender, System.ComponentModel.CancelEventArgs e)

@@ -11,7 +11,6 @@ namespace WillBank
             UserControlDashboard userControlDashboard = new UserControlDashboard();
             panelPlaceholder.Controls.Clear();
             panelPlaceholder.Controls.Add(userControlDashboard);
-
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -19,7 +18,6 @@ namespace WillBank
             panelPlaceholder.Controls.Clear();
             UserControlDashboard userControlDashboard = new UserControlDashboard();
             panelPlaceholder.Controls.Add(userControlDashboard);
-            
         }
 
         private void btnOpenAccount_Click(object sender, EventArgs e)
@@ -34,7 +32,6 @@ namespace WillBank
             panelPlaceholder.Controls.Clear();
             UserControlDeposit userControlDeposit = new UserControlDeposit();
             panelPlaceholder.Controls.Add(userControlDeposit);
-
         }
 
         private void btnWithdraw_Click(object sender, EventArgs e)
@@ -63,7 +60,6 @@ namespace WillBank
             panelPlaceholder.Controls.Clear();
             UserControlStatement userControlStatement = new UserControlStatement();
             panelPlaceholder.Controls.Add(userControlStatement);
-
         }
     }
 }

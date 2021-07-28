@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using WillBank.Model;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
+using WillBank.Model;
 using static Shared.Utilities;
-using System.Threading.Tasks;
-
 
 namespace WillBank.Core
 {
@@ -17,8 +15,6 @@ namespace WillBank.Core
     {
         private UserProfile User = new UserProfile();
         private readonly string accountPath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\accounts_data.json";
-       
-
 
         public bool OpenSavingsAccount(Account account)
         {
@@ -120,13 +116,27 @@ namespace WillBank.Core
             }
             catch (Exception)
             {
-
                 return null;
             }
-           
         }
 
-        public void FileAccessRetrieveSave()
+
+        public Guid GetUserIdWithAccountNumber(string accountNo)
+        {
+            FileAccessRetrieveSave();
+            var accountList = User.accountList;
+            try
+            {
+                var result = accountList.Find(accountItem => accountItem.AccountNumber == accountNo);
+                return result.UserId;
+            }
+            catch (Exception)
+            {
+                return Guid.Empty;
+            }
+        }
+
+        private void FileAccessRetrieveSave()
         {
             var openAccountFile = File.ReadAllText(accountPath);
             try
@@ -140,19 +150,15 @@ namespace WillBank.Core
             }
             catch (Exception)
             {
-
                 //
-            }  
+            }
         }
 
-        public void FileAccessAddRecord()
+        private void FileAccessAddRecord()
         {
             var options = new JsonSerializerOptions { WriteIndented = true, AllowTrailingCommas = true, IgnoreNullValues = true };
             string accountData = JsonSerializer.Serialize(User.accountList, options);
             File.WriteAllText(accountPath, accountData);
-  
         }
-
-
     }
 }

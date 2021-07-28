@@ -15,18 +15,14 @@ namespace WillBank
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
-
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 User user = new User();
@@ -49,15 +45,11 @@ namespace WillBank
                 {
                     MessageBox.Show("Email already registered, use another!");
                 }
-               
-
             }
             else
             {
                 MessageBox.Show("Oops! something went wrong");
             }
-
-
         }
 
         private void txtFirstName_Validating(object sender, CancelEventArgs e)
@@ -107,7 +99,6 @@ namespace WillBank
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
         {
-
             if (Shared.Validations.IsValidPassword(txtPassword.Text) == false)
             {
                 e.Cancel = true;
@@ -145,78 +136,62 @@ namespace WillBank
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void txtdont_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
 
         private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void FirstName_Click(object sender, EventArgs e)
         {
-
         }
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void LoginSideFrame_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void SideLogo_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

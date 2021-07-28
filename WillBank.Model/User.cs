@@ -1,5 +1,6 @@
 ﻿using System;
 using static Shared.Utilities;
+
 namespace WillBank.Model
 {
     public class User

@@ -1,100 +1,103 @@
-﻿/*using Shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using WillBank.Model;
-using WillBank.Store;
+using static Shared.Utilities;
 
 namespace WillBank.Core
 {
     public class TransactionRepository : ITransactionRepository
     {
-        *//* public string MakeDeposit(Transaction transaction)
-         {
-             string notification = string.Empty;
-             int preCount, postCount;
-             try
-             {
-                 var customerAccount = Customer.Accounts.Find(account => account.Id == transaction.AccountId);
-                 transaction.Balance = transaction.Amount + customerAccount.Balance;
-                 transaction.Id = count;
-                 preCount = DataStore.transactions.Count;
-                 DataStore.transactions.Add(transaction);
-                 count++;
-                 postCount = DataStore.transactions.Count;
-                 if (postCount > preCount)
-                 {
-                     customerAccount.Balance += transaction.Amount;
-                     notification = $"Successully deposited NGN{transaction.Amount} Into Account";
-                 }
-                 else notification = "Something went wrong, try Again";
-             }
-             catch (ArgumentNullException)
-             {
-                 notification = "Account Id doesnt exist ";
-             }
-
-             return notification;
-         }
-         public string MakeWithDraw(Transaction transaction)
-      }*//*
-        public IEnumerable<Transaction> GetTransactionsStatementById(Guid UserId, Guid AccountId, Guid TransactionId)
-        {
-            if (UserId!=null && AccountId!=null && TransactionId!=null)
-            {
-                var transactionList = ;
-                string notification = string.Empty;
-                if (transactionList.Count == 0)
-                {
-                    notification = "No transactions has been performed";
-                }
-                else
-                {
-                    var details = transactionList.Where(prop => prop.AccountId == accountId).ToList();
-                    TablePrinter tablePrinter = new TablePrinter("DATE", "DESCRIPTION", "TRANSACTION TYPE", "AMOUNT", "BALANCE");
-                    foreach (var transactionItem in details)
-                    {
-                        tablePrinter.AddRow($"{transactionItem.UpdatedAt}", $"{transactionItem.Description}", $"{transactionItem.Type}", $"{transactionItem.Amount:0.00}", $"{transactionItem.Balance:0.00}");
-                    }
-                    tablePrinter.Print();
-                }
-                return notification;
-            }
-        }
+        private UserProfile user = new UserProfile();
+        private Account account = new Account();
+        private IAccountRepository accountRepository;
 
         public bool MakeDeposit(Transaction transaction)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var customerAccount = user.accountList.Find(account => account.Id == transaction.AccountId);
+                transaction.Balance = transaction.Amount + customerAccount.Balance;
+                account.transactionList.Add(transaction);
+                customerAccount.Balance += transaction.Amount;
+                return true;
+            }
+            catch (ArgumentNullException)
+            {
+                return false;
+            }
         }
 
         public bool MakeWithDraw(Transaction transaction)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var customerAccount = user.accountList.Find(account => account.Id == transaction.AccountId);
+                transaction.Balance = transaction.Amount - customerAccount.Balance;
+                account.transactionList.Add(transaction);
+                customerAccount.Balance -= transaction.Amount;
+                return true;
+            }
+            catch (ArgumentNullException)
+            {
+                return false;
+            }
         }
 
-        public bool Transfer(Guid fromAccountId, Guid toAccountId)
+        public IEnumerable<Transaction> GetTransactionsStatementById(Guid AccountId)
         {
-            throw new NotImplementedException();
+            if (account.transactionList.Count == 0)
+            {
+                return null;
+            }
+            else
+            {
+                var details = account.transactionList.Where(prop => prop.AccountId == AccountId).ToList();
+                return details;
+            }
         }
 
-        // Get Balance from Transactions
-        public double getBalance()
+        public bool Transfer(Transaction transaction)
         {
-            double balance = 0.00;
-            Transactions.ForEach(trans => {
-                switch (trans.Type)
-                {
-                    case TransactionType.INTEREST_EARNED:
-                    case TransactionType.DEPOSIT:
-                        // add to balance
-                        balance += trans.Amount;
-                        break;
-                    case TransactionType.WITHDRAW:
-                        balance -= trans.Amount;
-                        break;
-                }
-            });
-            return balance;
+            bool check = transaction.SenderAccount == transaction.ReceiverAccount;
+            switch (check)
+            {
+                case true:
+                    return false;
+
+                case false:
+                    if (accountRepository.CheckAccountExistByAccountId(transaction.AccountId) != true)
+                    {
+                        var senderAccount = accountRepository.CheckAccountType(transaction.AccountId);
+                        if (senderAccount.Type == AccountType.Current && senderAccount.Balance > transaction.Amount)
+                        {
+                            MakeWithDraw(transaction);
+                        }
+                        else if (senderAccount.Type == AccountType.Savings && senderAccount.Balance > transaction.Amount && senderAccount.Balance > 1000)
+                        {
+                            MakeWithDraw(transaction);
+                        }
+
+                        if (accountRepository.GetUserIdWithAccountNumber(transaction.ReceiverAccount) != Guid.Empty)
+                        {
+                            // Assign values
+                            Transaction depositRecipient = new();
+                            depositRecipient.Amount = 1000;
+                            depositRecipient.UserId = accountRepository.GetUserIdWithAccountNumber(transaction.ReceiverAccount);
+                            depositRecipient.Description = $"Transfer - {transaction.Description}";
+                            depositRecipient.Type = TransactionType.Credit;
+                            depositRecipient.SenderAccount = "567--";
+                            depositRecipient.ReceiverAccount = "567";
+                            MakeDeposit(depositRecipient);
+                            return true;
+                        }
+                        else return false;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+            }
         }
     }
-}*/
+}

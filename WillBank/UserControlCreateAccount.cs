@@ -1,43 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WillBank.Core;
 using WillBank.Model;
-
-
 
 namespace WillBank
 {
     public partial class UserControlCreateAccount : UserControl
     {
+        private AccountRepository accountRepository = new AccountRepository();
 
-        AccountRepository accountRepository = new AccountRepository();
         public UserControlCreateAccount()
         {
             InitializeComponent();
 
             comboBoxAccountType.DataSource = Enum.GetValues(typeof(Shared.Utilities.AccountType));
-
         }
 
         private void comboBoxAccountType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            
-           
             Account account = new Account();
             account.UserId = Program.authUser;
-           
+
             try
             {
                 bool checkAccountTypeSelected = comboBoxAccountType.SelectedItem.Equals(Shared.Utilities.AccountType.Current);
@@ -59,9 +47,9 @@ namespace WillBank
                             {
                                 MessageBox.Show("Oops! something went wrong");
                             }
-
                         }
                         break;
+
                     case false:
                         bool isValid = Shared.Validations.IsValidNumber(txtInitialDeposit.Text) == true;
                         if (isValid)
@@ -72,37 +60,7 @@ namespace WillBank
                             if (isSuccess == true)
                             {
                                 MessageBox.Show("Successfully created an account");
-
-                                var accounts = accountRepository.GetAccountById(Program.authUser);
-                                // Create Column Headers
-                                DataTable dataTable = new DataTable("Accounts");
-                                DataColumn dataColumn = new DataColumn("SN");
-                                DataColumn dataColumn1 = new DataColumn("Date", typeof(DateTimeOffset));
-                                DataColumn dataColumn2 = new DataColumn("Account Number");
-                                DataColumn dataColumn3 = new DataColumn("Type");
-                                DataColumn dataColumn4 = new DataColumn("Balance", typeof(decimal));
-                                // Add Columns
-                                dataTable.Columns.Add(dataColumn);
-                                dataTable.Columns.Add(dataColumn1);
-                                dataTable.Columns.Add(dataColumn2);
-                                dataTable.Columns.Add(dataColumn3);
-                                dataTable.Columns.Add(dataColumn4);
-                                // Instantiate table row
-                                DataRow dataRow = dataTable.NewRow();
-                                // keep count
-                                int count = 1;
-                                foreach (var accountData in accounts)
-                                {
-                                    dataRow["SN"] = count;
-                                    dataRow["Date"] = accountData.UpdatedAt;
-                                    dataRow["Account"] = accountData.AccountNumber;
-                                    dataRow["Type"] = accountData.Type;
-                                    dataRow["Balance"] = accountData.Balance;
-                                    dataTable.Rows.Add(dataRow);
-                                    count++;
-                                }
-                                dataGridAccountView.DataSource = dataTable;
-
+                                btnGetAccount_Click(sender, e);
                             }
                             else
                             {
@@ -112,15 +70,11 @@ namespace WillBank
 
                         break;
                 }
-
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Please select account type");
             }
-           
-            
         }
 
         private void btnGetAccount_Click(object sender, EventArgs e)
@@ -140,12 +94,11 @@ namespace WillBank
             dataTable.Columns.Add(dataColumn3);
             dataTable.Columns.Add(dataColumn4);
             // Instantiate table row
-           
+
             // keep count
             int count = 1;
             foreach (var accountData in accounts)
             {
-                
                 try
                 {
                     DataRow dataRow = dataTable.NewRow();
@@ -159,11 +112,8 @@ namespace WillBank
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show("Data already added to table");
                 }
-                
-             
             }
             dataGridAccountView.DataSource = dataTable;
         }
