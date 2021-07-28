@@ -37,6 +37,7 @@ namespace WillBank
                 transaction.Amount = result;
                 transaction.UserId = Program.authUser;
                 transaction.Type = TransactionType.Debit;
+
                 transaction.ReceiverAccount = comboBoxSelectAccount.SelectedItem.ToString();
                 transaction.ReceiverAccount = txtAccountNo.Text;
                 transaction.Description = txtDescription.Text;

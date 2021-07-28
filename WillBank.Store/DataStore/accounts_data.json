@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "d4feca3b-60b5-485d-8c2c-fa70dbf312f6",
+    "UserId": "b5339662-ddec-4659-8e02-fdc2ebfff7f1",
+    "AccountNumber": "1089529457",
+    "Balance": 8399,
+    "Type": 1,
+    "UpdatedAt": "2021-07-30T18:51:31.6986303+01:00"
+  },
+  {
+    "Id": "242b935b-2e05-45f9-82dc-a1f697f0f607",
+    "UserId": "b5339662-ddec-4659-8e02-fdc2ebfff7f1",
+    "AccountNumber": "1089914964",
+    "Balance": 8655,
+    "Type": 2,
+    "UpdatedAt": "2021-07-30T18:55:24.8097718+01:00"
+  }
+]
