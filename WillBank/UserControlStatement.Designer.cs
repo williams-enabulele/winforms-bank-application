@@ -30,11 +30,11 @@ namespace WillBank
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnStatement = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBoxUserAccountNo = new System.Windows.Forms.ComboBox();
+            this.btnStatement = new System.Windows.Forms.Button();
+            this.dataGridStatementView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStatementView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -43,11 +43,20 @@ namespace WillBank
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.comboBoxUserAccountNo);
             this.panel1.Controls.Add(this.btnStatement);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridStatementView);
             this.panel1.Location = new System.Drawing.Point(117, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(668, 498);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBoxUserAccountNo
+            // 
+            this.comboBoxUserAccountNo.FormattingEnabled = true;
+            this.comboBoxUserAccountNo.Location = new System.Drawing.Point(71, 66);
+            this.comboBoxUserAccountNo.Name = "comboBoxUserAccountNo";
+            this.comboBoxUserAccountNo.Size = new System.Drawing.Size(367, 23);
+            this.comboBoxUserAccountNo.TabIndex = 2;
+            this.comboBoxUserAccountNo.Text = "  Select Account";
             // 
             // btnStatement
             // 
@@ -63,26 +72,17 @@ namespace WillBank
             this.btnStatement.UseVisualStyleBackColor = false;
             this.btnStatement.Click += new System.EventHandler(this.btnStatement_Click);
             // 
-            // dataGridView1
+            // dataGridStatementView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 109);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 349);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // comboBoxUserAccountNo
-            // 
-            this.comboBoxUserAccountNo.FormattingEnabled = true;
-            this.comboBoxUserAccountNo.Location = new System.Drawing.Point(71, 66);
-            this.comboBoxUserAccountNo.Name = "comboBoxUserAccountNo";
-            this.comboBoxUserAccountNo.Size = new System.Drawing.Size(367, 23);
-            this.comboBoxUserAccountNo.TabIndex = 2;
-            this.comboBoxUserAccountNo.Text = "  Select Account";
+            this.dataGridStatementView.AllowUserToAddRows = false;
+            this.dataGridStatementView.AllowUserToDeleteRows = false;
+            this.dataGridStatementView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridStatementView.Location = new System.Drawing.Point(71, 109);
+            this.dataGridStatementView.Name = "dataGridStatementView";
+            this.dataGridStatementView.ReadOnly = true;
+            this.dataGridStatementView.RowTemplate.Height = 25;
+            this.dataGridStatementView.Size = new System.Drawing.Size(530, 349);
+            this.dataGridStatementView.TabIndex = 0;
             // 
             // UserControlStatement
             // 
@@ -92,9 +92,8 @@ namespace WillBank
             this.Controls.Add(this.panel1);
             this.Name = "UserControlStatement";
             this.Size = new System.Drawing.Size(913, 574);
-            //this.Load += new System.EventHandler(this.UserControlStatement_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStatementView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -103,7 +102,7 @@ namespace WillBank
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnStatement;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridStatementView;
         private System.Windows.Forms.ComboBox comboBoxUserAccountNo;
     }
 }

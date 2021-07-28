@@ -30,6 +30,8 @@ namespace WillBank
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnDeposit = new System.Windows.Forms.Button();
             this.comboBoxSelectAccount = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +44,8 @@ namespace WillBank
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.labelDescription);
+            this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.btnDeposit);
             this.panel1.Controls.Add(this.comboBoxSelectAccount);
             this.panel1.Controls.Add(this.label2);
@@ -52,13 +56,31 @@ namespace WillBank
             this.panel1.Size = new System.Drawing.Size(660, 416);
             this.panel1.TabIndex = 0;
             // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelDescription.Location = new System.Drawing.Point(146, 203);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(84, 18);
+            this.labelDescription.TabIndex = 15;
+            this.labelDescription.Text = "Description";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(146, 228);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(377, 42);
+            this.txtDescription.TabIndex = 14;
+            // 
             // btnDeposit
             // 
             this.btnDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(244)))), ((int)(((byte)(198)))));
             this.btnDeposit.FlatAppearance.BorderSize = 0;
             this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeposit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeposit.Location = new System.Drawing.Point(189, 245);
+            this.btnDeposit.Location = new System.Drawing.Point(189, 295);
             this.btnDeposit.Name = "btnDeposit";
             this.btnDeposit.Size = new System.Drawing.Size(284, 50);
             this.btnDeposit.TabIndex = 13;
@@ -69,7 +91,7 @@ namespace WillBank
             // comboBoxSelectAccount
             // 
             this.comboBoxSelectAccount.FormattingEnabled = true;
-            this.comboBoxSelectAccount.Location = new System.Drawing.Point(146, 132);
+            this.comboBoxSelectAccount.Location = new System.Drawing.Point(146, 90);
             this.comboBoxSelectAccount.Name = "comboBoxSelectAccount";
             this.comboBoxSelectAccount.Size = new System.Drawing.Size(377, 23);
             this.comboBoxSelectAccount.TabIndex = 7;
@@ -79,7 +101,7 @@ namespace WillBank
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(146, 165);
+            this.label2.Location = new System.Drawing.Point(146, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 18);
             this.label2.TabIndex = 11;
@@ -89,7 +111,7 @@ namespace WillBank
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(146, 104);
+            this.label1.Location = new System.Drawing.Point(146, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 18);
             this.label1.TabIndex = 8;
@@ -97,7 +119,7 @@ namespace WillBank
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(146, 193);
+            this.txtAmount.Location = new System.Drawing.Point(146, 151);
             this.txtAmount.Multiline = true;
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(377, 42);
@@ -126,5 +148,7 @@ namespace WillBank
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.Label labelDescription;
+        private System.Windows.Forms.TextBox txtDescription;
     }
 }

@@ -64,10 +64,10 @@ namespace WillBank
             // SideLogo
             // 
             this.SideLogo.Image = ((System.Drawing.Image)(resources.GetObject("SideLogo.Image")));
-            this.SideLogo.Location = new System.Drawing.Point(99, 147);
+            this.SideLogo.Location = new System.Drawing.Point(94, 228);
             this.SideLogo.Margin = new System.Windows.Forms.Padding(2);
             this.SideLogo.Name = "SideLogo";
-            this.SideLogo.Size = new System.Drawing.Size(112, 114);
+            this.SideLogo.Size = new System.Drawing.Size(94, 80);
             this.SideLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SideLogo.TabIndex = 0;
             this.SideLogo.TabStop = false;
@@ -146,10 +146,11 @@ namespace WillBank
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(41, 275);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(12, 341);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 90);
+            this.label1.Size = new System.Drawing.Size(267, 96);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,10 +223,10 @@ namespace WillBank
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(184, 63);
+            this.pictureBox2.Location = new System.Drawing.Point(184, 82);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 114);
+            this.pictureBox2.Size = new System.Drawing.Size(101, 82);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;

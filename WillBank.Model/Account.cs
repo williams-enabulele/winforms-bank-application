@@ -6,8 +6,8 @@ namespace WillBank.Model
 {
     public class Account
     {
-        public Guid Id { get; set; }
-        public Guid UserId { get; set; }
+        public string Id { get; set; }
+        public string UserId { get; set; }
         public string AccountNumber { get; set; }
         public decimal Balance { get; set; }
         public AccountType Type { get; set; }
@@ -17,7 +17,7 @@ namespace WillBank.Model
 
         public Account()
         {
-            Id = Guid.NewGuid();
+            Id = Guid.NewGuid().ToString();
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
         }

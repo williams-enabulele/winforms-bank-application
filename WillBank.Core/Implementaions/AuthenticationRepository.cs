@@ -9,7 +9,7 @@ namespace WillBank.Core
 {
     public class AuthenticationRepository : IAuthenticationRepository
     {
-        public Guid customerId;
+        public string customerId;
         private readonly Cryptography cryptography = new Cryptography();
 
         /// <summary>

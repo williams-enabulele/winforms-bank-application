@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using WillBank.Model;
 
 namespace WillBank.Core
@@ -11,7 +10,7 @@ namespace WillBank.Core
         bool MakeWithDraw(Transaction transaction);
 
         bool Transfer(Transaction transaction);
-       
-        IEnumerable<Transaction> GetTransactionsStatementById(Guid AccountId);
+
+        IEnumerable<Transaction> GetTransactionsStatementById(string AccountId);
     }
 }

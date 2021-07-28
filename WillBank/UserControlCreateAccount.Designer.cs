@@ -57,7 +57,7 @@ namespace WillBank
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(122, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 590);
+            this.panel1.Size = new System.Drawing.Size(653, 527);
             this.panel1.TabIndex = 0;
             // 
             // btnGetAccount
@@ -66,7 +66,7 @@ namespace WillBank
             this.btnGetAccount.FlatAppearance.BorderSize = 0;
             this.btnGetAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetAccount.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGetAccount.Location = new System.Drawing.Point(470, 340);
+            this.btnGetAccount.Location = new System.Drawing.Point(470, 266);
             this.btnGetAccount.Name = "btnGetAccount";
             this.btnGetAccount.Size = new System.Drawing.Size(133, 36);
             this.btnGetAccount.TabIndex = 16;
@@ -78,7 +78,7 @@ namespace WillBank
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(58, 358);
+            this.label3.Location = new System.Drawing.Point(58, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 18);
             this.label3.TabIndex = 15;
@@ -90,7 +90,7 @@ namespace WillBank
             this.dataGridAccountView.AllowUserToDeleteRows = false;
             this.dataGridAccountView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataGridAccountView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAccountView.Location = new System.Drawing.Point(58, 392);
+            this.dataGridAccountView.Location = new System.Drawing.Point(58, 318);
             this.dataGridAccountView.Name = "dataGridAccountView";
             this.dataGridAccountView.ReadOnly = true;
             this.dataGridAccountView.RowTemplate.Height = 25;
@@ -103,7 +103,7 @@ namespace WillBank
             this.btnCreateAccount.FlatAppearance.BorderSize = 0;
             this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAccount.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCreateAccount.Location = new System.Drawing.Point(194, 247);
+            this.btnCreateAccount.Location = new System.Drawing.Point(194, 189);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(284, 50);
             this.btnCreateAccount.TabIndex = 13;
@@ -114,7 +114,7 @@ namespace WillBank
             // comboBoxAccountType
             // 
             this.comboBoxAccountType.FormattingEnabled = true;
-            this.comboBoxAccountType.Location = new System.Drawing.Point(147, 134);
+            this.comboBoxAccountType.Location = new System.Drawing.Point(147, 76);
             this.comboBoxAccountType.Name = "comboBoxAccountType";
             this.comboBoxAccountType.Size = new System.Drawing.Size(377, 23);
             this.comboBoxAccountType.TabIndex = 7;
@@ -125,7 +125,7 @@ namespace WillBank
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(147, 167);
+            this.label2.Location = new System.Drawing.Point(147, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 18);
             this.label2.TabIndex = 11;
@@ -135,7 +135,7 @@ namespace WillBank
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(147, 106);
+            this.label1.Location = new System.Drawing.Point(147, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 8;
@@ -143,7 +143,7 @@ namespace WillBank
             // 
             // txtInitialDeposit
             // 
-            this.txtInitialDeposit.Location = new System.Drawing.Point(147, 195);
+            this.txtInitialDeposit.Location = new System.Drawing.Point(147, 137);
             this.txtInitialDeposit.Multiline = true;
             this.txtInitialDeposit.Name = "txtInitialDeposit";
             this.txtInitialDeposit.Size = new System.Drawing.Size(377, 42);
@@ -153,7 +153,7 @@ namespace WillBank
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Location = new System.Drawing.Point(49, 380);
+            this.panel2.Location = new System.Drawing.Point(49, 306);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(566, 169);
             this.panel2.TabIndex = 17;

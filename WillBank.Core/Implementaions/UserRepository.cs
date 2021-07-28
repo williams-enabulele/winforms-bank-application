@@ -65,7 +65,7 @@ namespace WillBank.Core
                 customer.Salt = passwordSalt;
                 customer.userType = Utilities.UserType.Customer;
                 DataStore.authUser.Add(customer);
-                Guid lastInsertId = customer.Id;
+                string lastInsertId = customer.Id;
                 userProfile.Id = lastInsertId;
                 userProfile.userType = customer.userType;
                 RegisterProfile(userProfile);

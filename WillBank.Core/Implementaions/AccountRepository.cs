@@ -42,7 +42,7 @@ namespace WillBank.Core
             return false;
         }
 
-        public IEnumerable<Account> GetAccountById(Guid userId)
+        public IEnumerable<Account> GetAccountById(string userId)
         {
             FileAccessRetrieveSave();
             var accountList = User.accountList;
@@ -57,7 +57,7 @@ namespace WillBank.Core
             }
         }
 
-        public bool CheckAccountExist(Guid userId)
+        public bool CheckAccountExist(string userId)
         {
             FileAccessRetrieveSave();
             var accountList = User.accountList;
@@ -76,7 +76,7 @@ namespace WillBank.Core
             }
         }
 
-        public bool CheckAccountExistByAccountId(Guid accountId)
+        public bool CheckAccountExistByAccountId(string accountId)
         {
             FileAccessRetrieveSave();
             var accountList = User.accountList;
@@ -105,7 +105,7 @@ namespace WillBank.Core
             return accountNum;
         }
 
-        public Account CheckAccountType(Guid accountId)
+        public Account CheckAccountType(string accountId)
         {
             FileAccessRetrieveSave();
             var accountList = User.accountList;
@@ -120,19 +120,18 @@ namespace WillBank.Core
             }
         }
 
-
-        public Guid GetUserIdWithAccountNumber(string accountNo)
+        public Account GetUserIdWithAccountNumber(string accountNo)
         {
             FileAccessRetrieveSave();
             var accountList = User.accountList;
             try
             {
                 var result = accountList.Find(accountItem => accountItem.AccountNumber == accountNo);
-                return result.UserId;
+                return result;
             }
             catch (Exception)
             {
-                return Guid.Empty;
+                return null;
             }
         }
 

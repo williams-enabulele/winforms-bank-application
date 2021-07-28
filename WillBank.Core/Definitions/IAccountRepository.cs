@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using WillBank.Model;
 
 namespace WillBank.Core
@@ -10,12 +9,14 @@ namespace WillBank.Core
 
         bool OpenCurrentAccount(Account account);
 
-        bool CheckAccountExist(Guid customerId);
+        bool CheckAccountExist(string customerId);
 
-        bool CheckAccountExistByAccountId(Guid accountId);
+        bool CheckAccountExistByAccountId(string accountId);
 
-        Account CheckAccountType(Guid accountId);
-        Guid GetUserIdWithAccountNumber(string accountNo);
-        IEnumerable<Account> GetAccountById(Guid userId);
+        Account CheckAccountType(string accountId);
+
+        Account GetUserIdWithAccountNumber(string accountNo);
+
+        IEnumerable<Account> GetAccountById(string userId);
     }
 }

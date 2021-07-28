@@ -60,7 +60,6 @@ namespace WillBank
                             if (isSuccess == true)
                             {
                                 MessageBox.Show("Successfully created an account");
-                                btnGetAccount_Click(sender, e);
                             }
                             else
                             {
@@ -115,6 +114,7 @@ namespace WillBank
                     MessageBox.Show("Data already added to table");
                 }
             }
+
             dataGridAccountView.DataSource = dataTable;
         }
     }
