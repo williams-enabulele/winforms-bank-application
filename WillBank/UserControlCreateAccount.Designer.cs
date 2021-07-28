@@ -30,26 +30,72 @@ namespace WillBank
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGetAccount = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridAccountView = new System.Windows.Forms.DataGridView();
             this.btnCreateAccount = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxAccountType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtInitialDeposit = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAccountView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnGetAccount);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.dataGridAccountView);
             this.panel1.Controls.Add(this.btnCreateAccount);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.comboBoxAccountType);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(122, 50);
+            this.panel1.Controls.Add(this.txtInitialDeposit);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(122, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 457);
+            this.panel1.Size = new System.Drawing.Size(653, 590);
             this.panel1.TabIndex = 0;
+            // 
+            // btnGetAccount
+            // 
+            this.btnGetAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(244)))), ((int)(((byte)(198)))));
+            this.btnGetAccount.FlatAppearance.BorderSize = 0;
+            this.btnGetAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetAccount.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGetAccount.Location = new System.Drawing.Point(470, 340);
+            this.btnGetAccount.Name = "btnGetAccount";
+            this.btnGetAccount.Size = new System.Drawing.Size(133, 36);
+            this.btnGetAccount.TabIndex = 16;
+            this.btnGetAccount.Text = "Get Account";
+            this.btnGetAccount.UseVisualStyleBackColor = false;
+            this.btnGetAccount.Click += new System.EventHandler(this.btnGetAccount_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(58, 358);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 18);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "My Accounts";
+            // 
+            // dataGridAccountView
+            // 
+            this.dataGridAccountView.AllowUserToAddRows = false;
+            this.dataGridAccountView.AllowUserToDeleteRows = false;
+            this.dataGridAccountView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dataGridAccountView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAccountView.Location = new System.Drawing.Point(58, 392);
+            this.dataGridAccountView.Name = "dataGridAccountView";
+            this.dataGridAccountView.ReadOnly = true;
+            this.dataGridAccountView.RowTemplate.Height = 25;
+            this.dataGridAccountView.Size = new System.Drawing.Size(545, 150);
+            this.dataGridAccountView.TabIndex = 14;
             // 
             // btnCreateAccount
             // 
@@ -63,14 +109,17 @@ namespace WillBank
             this.btnCreateAccount.TabIndex = 13;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
-            // comboBox1
+            // comboBoxAccountType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(377, 23);
-            this.comboBox1.TabIndex = 7;
+            this.comboBoxAccountType.FormattingEnabled = true;
+            this.comboBoxAccountType.Location = new System.Drawing.Point(147, 134);
+            this.comboBoxAccountType.Name = "comboBoxAccountType";
+            this.comboBoxAccountType.Size = new System.Drawing.Size(377, 23);
+            this.comboBoxAccountType.TabIndex = 7;
+            this.comboBoxAccountType.Text = "  Select Type of Account";
+            this.comboBoxAccountType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAccountType_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -92,13 +141,22 @@ namespace WillBank
             this.label1.TabIndex = 8;
             this.label1.Text = "Account Type";
             // 
-            // textBox1
+            // txtInitialDeposit
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 195);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 42);
-            this.textBox1.TabIndex = 9;
+            this.txtInitialDeposit.Location = new System.Drawing.Point(147, 195);
+            this.txtInitialDeposit.Multiline = true;
+            this.txtInitialDeposit.Name = "txtInitialDeposit";
+            this.txtInitialDeposit.Size = new System.Drawing.Size(377, 42);
+            this.txtInitialDeposit.TabIndex = 9;
+            this.txtInitialDeposit.Text = "0.00";
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Location = new System.Drawing.Point(49, 380);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(566, 169);
+            this.panel2.TabIndex = 17;
             // 
             // UserControlCreateAccount
             // 
@@ -107,9 +165,10 @@ namespace WillBank
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.Controls.Add(this.panel1);
             this.Name = "UserControlCreateAccount";
-            this.Size = new System.Drawing.Size(900, 573);
+            this.Size = new System.Drawing.Size(900, 658);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAccountView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,9 +177,13 @@ namespace WillBank
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCreateAccount;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxAccountType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtInitialDeposit;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridAccountView;
+        private System.Windows.Forms.Button btnGetAccount;
+        private System.Windows.Forms.Panel panel2;
     }
 }

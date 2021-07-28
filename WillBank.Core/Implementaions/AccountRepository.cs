@@ -4,9 +4,11 @@ using System.Linq;
 using WillBank.Model;
 using System.IO;
 using System.Text.Json;
+using static Shared.Utilities;
 using System.Threading.Tasks;
 
-namespace WillsBank.Core
+
+namespace WillBank.Core
 {
     /// <summary>
     /// AccountRepository Class
@@ -14,28 +16,39 @@ namespace WillsBank.Core
     public class AccountRepository : IAccountRepository
     {
         private UserProfile User = new UserProfile();
+        private readonly string accountPath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\accounts_data.json";
        
 
-        public string OpenSavingsAccount(Account account)
+
+        public bool OpenSavingsAccount(Account account)
         {
+            FileAccessRetrieveSave();
             if (account != null)
             {
+                account.Type = AccountType.Savings;
                 User.accountList.Add(account);
+                FileAccessAddRecord();
+                return true;
             }
-            return "All fields are required";
+            return false;
         }
 
-        public string OpenCurrentAccount(Account account)
+        public bool OpenCurrentAccount(Account account)
         {
+            FileAccessRetrieveSave();
             if (account != null)
             {
+                account.Type = AccountType.Current;
                 User.accountList.Add(account);
+                FileAccessAddRecord();
+                return true;
             }
-            return "All fields are required";
+            return false;
         }
 
         public IEnumerable<Account> GetAccountById(Guid userId)
         {
+            FileAccessRetrieveSave();
             var accountList = User.accountList;
             try
             {
@@ -50,6 +63,7 @@ namespace WillsBank.Core
 
         public bool CheckAccountExist(Guid userId)
         {
+            FileAccessRetrieveSave();
             var accountList = User.accountList;
             try
             {
@@ -68,6 +82,7 @@ namespace WillsBank.Core
 
         public bool CheckAccountExistByAccountId(Guid accountId)
         {
+            FileAccessRetrieveSave();
             var accountList = User.accountList;
             try
             {
@@ -85,8 +100,18 @@ namespace WillsBank.Core
             }
         }
 
+        public string GenerateAccountNumber()
+        {
+            string accountNum = "1089";
+            var rand = new Random();
+            var randNum = rand.Next(100000, 999999);
+            accountNum += randNum.ToString();
+            return accountNum;
+        }
+
         public Account CheckAccountType(Guid accountId)
         {
+            FileAccessRetrieveSave();
             var accountList = User.accountList;
             try
             {
@@ -101,8 +126,32 @@ namespace WillsBank.Core
            
         }
 
+        public void FileAccessRetrieveSave()
+        {
+            var openAccountFile = File.ReadAllText(accountPath);
+            try
+            {
+                var accountObj = JsonSerializer.Deserialize<List<Account>>(openAccountFile);
 
+                foreach (var item in accountObj)
+                {
+                    User.accountList.Add(item);
+                }
+            }
+            catch (Exception)
+            {
 
+                //
+            }  
+        }
+
+        public void FileAccessAddRecord()
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true, AllowTrailingCommas = true, IgnoreNullValues = true };
+            string accountData = JsonSerializer.Serialize(User.accountList, options);
+            File.WriteAllText(accountPath, accountData);
+  
+        }
 
 
     }

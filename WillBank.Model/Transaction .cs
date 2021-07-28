@@ -14,8 +14,8 @@ namespace WillBank.Model
         public decimal Balance { get; set; }
         public string SenderAccount { get; set; }
         public string ReceiverAccount { get; set; }
-        private DateTime CreatedAt { get;}
-        public DateTime UpdatedAt { get; set; }
+        private DateTimeOffset CreatedAt { get;}
+        public DateTimeOffset UpdatedAt { get; set; }
         public TransactionType Type { get; set; }
         public Transaction()
         {

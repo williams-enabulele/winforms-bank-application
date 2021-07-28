@@ -74,9 +74,9 @@ namespace WillBank
             this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(128, 210);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 18);
+            this.label3.Size = new System.Drawing.Size(192, 18);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Enter Recipient Account";
+            this.label3.Text = "Enter Recipient Account No.";
             // 
             // label2
             // 
@@ -103,6 +103,7 @@ namespace WillBank
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(377, 42);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "0.00";
             // 
             // label1
             // 
@@ -121,6 +122,7 @@ namespace WillBank
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(377, 23);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "  Select Account";
             // 
             // UserControlTransfer
             // 

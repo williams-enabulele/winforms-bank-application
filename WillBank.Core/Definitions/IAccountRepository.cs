@@ -4,12 +4,12 @@ using System.Text;
 using WillBank.Model;
 
 
-namespace WillsBank.Core
+namespace WillBank.Core
 {
     public interface IAccountRepository
     {
-        string OpenSavingsAccount(Account account);
-        string OpenCurrentAccount(Account account);
+        bool OpenSavingsAccount(Account account);
+        bool OpenCurrentAccount(Account account);
         bool CheckAccountExist(Guid customerId);
         bool CheckAccountExistByAccountId(Guid accountId);
         Account CheckAccountType(Guid accountId);

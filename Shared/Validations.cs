@@ -43,6 +43,19 @@ namespace Shared
             else return false;
         }
 
+        public static bool IsValidNumber(string number)
+        {
+            var num = new Regex(@"[0-9]");
+            if (num.IsMatch(number)== true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static bool ConfirmPassword(string password, string password2)
         {
             bool check = password == password2 ? true : false;

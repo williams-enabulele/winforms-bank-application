@@ -5,6 +5,7 @@ namespace WillBank
 {
     static class Program
     {
+        public static Guid authUser;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

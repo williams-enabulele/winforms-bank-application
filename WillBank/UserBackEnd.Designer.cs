@@ -318,10 +318,10 @@ namespace WillBank
             // 
             this.panelPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelPlaceholder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.panelPlaceholder.Location = new System.Drawing.Point(216, 75);
+            this.panelPlaceholder.Location = new System.Drawing.Point(228, 75);
             this.panelPlaceholder.Margin = new System.Windows.Forms.Padding(2);
             this.panelPlaceholder.Name = "panelPlaceholder";
-            this.panelPlaceholder.Size = new System.Drawing.Size(829, 547);
+            this.panelPlaceholder.Size = new System.Drawing.Size(816, 547);
             this.panelPlaceholder.TabIndex = 5;
             // 
             // UserBackEnd

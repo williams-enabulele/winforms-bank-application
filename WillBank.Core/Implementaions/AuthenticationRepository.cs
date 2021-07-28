@@ -26,7 +26,7 @@ namespace WillBank.Core
                 var openUserFile = File.ReadAllText(userPath);
                 var userObj = JsonSerializer.Deserialize<List<User>>(openUserFile);
 
-                if (email != null && password != null)
+                if (!string.IsNullOrWhiteSpace(email) && !string.IsNullOrWhiteSpace(password))
                 {
                     var customerObj = userObj.Find(customer => customer.Email == email);
 

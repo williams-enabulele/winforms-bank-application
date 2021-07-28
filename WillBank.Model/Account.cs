@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using static Shared.Utilities;
 
 namespace WillBank.Model
 {
@@ -10,9 +11,10 @@ namespace WillBank.Model
         public Guid UserId { get; set; }
         public string AccountNumber { get; set; }
         public decimal Balance { get; set; }
-        private DateTime CreatedAt { get;}
-        public DateTime UpdatedAt { get; set; }
-        public List<Transaction> transactionList = new();
+        public AccountType Type { get; set; }
+        private DateTimeOffset CreatedAt { get;}
+        public DateTimeOffset UpdatedAt { get; set; }
+        //public List<Transaction> transactionList  = null;
 
         public Account()
         {

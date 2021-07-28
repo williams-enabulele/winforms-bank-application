@@ -5,7 +5,7 @@ using System.IO;
 using System.Text.Json;
 using WillBank.Model;
 using WillBank.Store;
-using WillsBank.Core;
+using WillBank.Core;
 
 namespace WillBank.Core
 {

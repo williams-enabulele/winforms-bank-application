@@ -16,5 +16,10 @@ namespace WillBank
         {
             InitializeComponent();
         }
+
+        private void placeTxt1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

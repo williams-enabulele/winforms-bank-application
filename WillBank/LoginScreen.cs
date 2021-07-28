@@ -62,6 +62,7 @@ namespace WillBank
             {
                 UserBackEnd userBackEnd = new UserBackEnd();
                 userBackEnd.Show();
+                Program.authUser = authenticationRepository.customerId;
                 this.Hide();
             }
             else

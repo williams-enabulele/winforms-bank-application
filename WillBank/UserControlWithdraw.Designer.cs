@@ -100,6 +100,7 @@ namespace WillBank
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(377, 23);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.Text = "  Select Account ";
             // 
             // UserControlWithdraw
             // 

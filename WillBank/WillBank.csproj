@@ -13,9 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <TreatAsUsed>true</TreatAsUsed>
-    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj" />
     <ProjectReference Include="..\WillBank.Core\WillBank.Core.csproj">
       <TreatAsUsed>true</TreatAsUsed>
     </ProjectReference>

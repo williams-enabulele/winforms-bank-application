@@ -30,10 +30,10 @@ namespace WillBank
         private void InitializeComponent()
         {
             this.balanceFrame = new System.Windows.Forms.Panel();
-            this.placeTxt1 = new System.Windows.Forms.Label();
+            this.txtAccountBalance = new System.Windows.Forms.Label();
             this.txtBalance = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtAccountNo = new System.Windows.Forms.Label();
             this.txtAccount = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPlaceholder = new System.Windows.Forms.TextBox();
@@ -46,22 +46,23 @@ namespace WillBank
             // balanceFrame
             // 
             this.balanceFrame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(254)))), ((int)(((byte)(248)))));
-            this.balanceFrame.Controls.Add(this.placeTxt1);
+            this.balanceFrame.Controls.Add(this.txtAccountBalance);
             this.balanceFrame.Controls.Add(this.txtBalance);
             this.balanceFrame.Location = new System.Drawing.Point(128, 118);
             this.balanceFrame.Name = "balanceFrame";
             this.balanceFrame.Size = new System.Drawing.Size(310, 100);
             this.balanceFrame.TabIndex = 0;
             // 
-            // placeTxt1
+            // txtAccountBalance
             // 
-            this.placeTxt1.AutoSize = true;
-            this.placeTxt1.Font = new System.Drawing.Font("AvertaStd-Regular", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.placeTxt1.Location = new System.Drawing.Point(197, 46);
-            this.placeTxt1.Name = "placeTxt1";
-            this.placeTxt1.Size = new System.Drawing.Size(70, 34);
-            this.placeTxt1.TabIndex = 1;
-            this.placeTxt1.Text = "0.00";
+            this.txtAccountBalance.AutoSize = true;
+            this.txtAccountBalance.Font = new System.Drawing.Font("AvertaStd-Regular", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAccountBalance.Location = new System.Drawing.Point(197, 46);
+            this.txtAccountBalance.Name = "txtAccountBalance";
+            this.txtAccountBalance.Size = new System.Drawing.Size(70, 34);
+            this.txtAccountBalance.TabIndex = 1;
+            this.txtAccountBalance.Text = "0.00";
+            this.txtAccountBalance.Click += new System.EventHandler(this.placeTxt1_Click);
             // 
             // txtBalance
             // 
@@ -76,22 +77,22 @@ namespace WillBank
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.txtAccountNo);
             this.panel3.Controls.Add(this.txtAccount);
             this.panel3.Location = new System.Drawing.Point(479, 118);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(310, 100);
             this.panel3.TabIndex = 2;
             // 
-            // label1
+            // txtAccountNo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("AvertaStd-Regular", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(205, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "0.00";
+            this.txtAccountNo.AutoSize = true;
+            this.txtAccountNo.Font = new System.Drawing.Font("AvertaStd-Regular", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAccountNo.Location = new System.Drawing.Point(205, 46);
+            this.txtAccountNo.Name = "txtAccountNo";
+            this.txtAccountNo.Size = new System.Drawing.Size(70, 34);
+            this.txtAccountNo.TabIndex = 2;
+            this.txtAccountNo.Text = "0.00";
             // 
             // txtAccount
             // 
@@ -156,10 +157,10 @@ namespace WillBank
         #endregion
 
         private System.Windows.Forms.Panel balanceFrame;
-        private System.Windows.Forms.Label placeTxt1;
+        private System.Windows.Forms.Label txtAccountBalance;
         private System.Windows.Forms.Label txtBalance;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtAccountNo;
         private System.Windows.Forms.Label txtAccount;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;

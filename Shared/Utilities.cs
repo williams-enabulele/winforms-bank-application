@@ -8,12 +8,21 @@ namespace Shared
     {
         public enum TransactionType
         {
-            Credit, Debit
+            Credit = 1, 
+            Debit=2
         }
 
         public enum UserType
         {
-            Admin, Customer, Employee
+            Admin = 1, 
+            Customer = 2, 
+            Employee = 3
+        }
+
+        public enum AccountType
+        {
+            Savings = 1,
+            Current = 2
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WillBank.Model;
 
-namespace WillsBank.Core
+namespace WillBank.Core
 {
     public interface IUserRepository
     {
