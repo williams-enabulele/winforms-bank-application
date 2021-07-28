@@ -1,11 +1,9 @@
 ﻿using Shared;
 using System;
-using WillBank.Model;
-using WillBank.Store;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+using WillBank.Model;
 
 namespace WillBank.Core
 {
@@ -20,15 +18,14 @@ namespace WillBank.Core
         /// <param name="email"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public bool Login (string email, string password)
+        public bool Login(string email, string password)
         {
             string userPath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\users_data.json";
             try
             {
-
                 var openUserFile = File.ReadAllText(userPath);
                 var userObj = JsonSerializer.Deserialize<List<User>>(openUserFile);
-                
+
                 if (email != null && password != null)
                 {
                     var customerObj = userObj.Find(customer => customer.Email == email);
@@ -42,7 +39,6 @@ namespace WillBank.Core
                     {
                         return false;
                     }
-                   
                 }
                 else
                 {
@@ -53,9 +49,6 @@ namespace WillBank.Core
             {
                 return false;
             }
-           
         }
-
-        
     }
 }

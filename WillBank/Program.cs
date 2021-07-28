@@ -14,7 +14,7 @@ namespace WillBank
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegisterScreen());
+            Application.Run(new LoginScreen());
         }
     }
 }

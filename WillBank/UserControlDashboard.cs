@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WillBank
 {
-    public partial class UserControlDeposit : UserControl
+    public partial class UserControlDashboard : UserControl
     {
-        public UserControlDeposit()
+        public UserControlDashboard()
         {
             InitializeComponent();
         }

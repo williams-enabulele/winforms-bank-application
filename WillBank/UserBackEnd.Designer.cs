@@ -47,6 +47,8 @@ namespace WillBank
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelPlaceholder = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -56,16 +58,17 @@ namespace WillBank
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(7)))), ((int)(((byte)(11)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(228, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(833, 75);
+            this.panel2.Size = new System.Drawing.Size(816, 75);
             this.panel2.TabIndex = 4;
             // 
             // btnAccount
@@ -157,13 +160,14 @@ namespace WillBank
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLogout.Location = new System.Drawing.Point(0, 495);
+            this.btnLogout.Location = new System.Drawing.Point(0, 570);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(228, 52);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pictureBox4
             // 
@@ -189,6 +193,7 @@ namespace WillBank
             this.btnTransfer.TabIndex = 6;
             this.btnTransfer.Text = "Transfer";
             this.btnTransfer.UseVisualStyleBackColor = true;
+            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
             // btnWithdraw
             // 
@@ -203,6 +208,7 @@ namespace WillBank
             this.btnWithdraw.TabIndex = 5;
             this.btnWithdraw.Text = "Withdraw";
             this.btnWithdraw.UseVisualStyleBackColor = true;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
             // btnDeposit
             // 
@@ -217,6 +223,7 @@ namespace WillBank
             this.btnDeposit.TabIndex = 4;
             this.btnDeposit.Text = "Deposit";
             this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // btnOpenAccount
             // 
@@ -231,6 +238,7 @@ namespace WillBank
             this.btnOpenAccount.TabIndex = 3;
             this.btnOpenAccount.Text = "Open Account";
             this.btnOpenAccount.UseVisualStyleBackColor = true;
+            this.btnOpenAccount.Click += new System.EventHandler(this.btnOpenAccount_Click);
             // 
             // pictureBox3
             // 
@@ -257,12 +265,14 @@ namespace WillBank
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 547);
+            this.panel1.Size = new System.Drawing.Size(228, 622);
             this.panel1.TabIndex = 3;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(255)))), ((int)(((byte)(207)))));
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Controls.Add(this.pictureBox5);
@@ -275,28 +285,57 @@ namespace WillBank
             this.panel5.Location = new System.Drawing.Point(0, 179);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(228, 244);
+            this.panel5.Size = new System.Drawing.Size(228, 296);
             this.panel5.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WillBank.Properties.Resources.remove_file;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 224);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(0, 208);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 52);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Statement";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelPlaceholder
             // 
-            this.panelPlaceholder.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelPlaceholder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPlaceholder.Location = new System.Drawing.Point(0, 0);
+            this.panelPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelPlaceholder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
+            this.panelPlaceholder.Location = new System.Drawing.Point(216, 75);
             this.panelPlaceholder.Margin = new System.Windows.Forms.Padding(2);
             this.panelPlaceholder.Name = "panelPlaceholder";
-            this.panelPlaceholder.Size = new System.Drawing.Size(1061, 547);
+            this.panelPlaceholder.Size = new System.Drawing.Size(829, 547);
             this.panelPlaceholder.TabIndex = 5;
             // 
             // UserBackEnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1061, 547);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPlaceholder);
             this.Name = "UserBackEnd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserBackEnd";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -306,6 +345,7 @@ namespace WillBank
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,5 +370,7 @@ namespace WillBank
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panelPlaceholder;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

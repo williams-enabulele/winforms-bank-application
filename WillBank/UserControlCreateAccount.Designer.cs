@@ -1,7 +1,7 @@
 ﻿
 namespace WillBank
 {
-    partial class UserControlDeposit
+    partial class UserControlCreateAccount
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace WillBank
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDeposit = new System.Windows.Forms.Button();
+            this.btnCreateAccount = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,35 +40,34 @@ namespace WillBank
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnDeposit);
+            this.panel1.Controls.Add(this.btnCreateAccount);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(75, 78);
+            this.panel1.Location = new System.Drawing.Point(122, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(660, 416);
+            this.panel1.Size = new System.Drawing.Size(653, 457);
             this.panel1.TabIndex = 0;
             // 
-            // btnDeposit
+            // btnCreateAccount
             // 
-            this.btnDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(244)))), ((int)(((byte)(198)))));
-            this.btnDeposit.FlatAppearance.BorderSize = 0;
-            this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeposit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeposit.Location = new System.Drawing.Point(189, 245);
-            this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(284, 50);
-            this.btnDeposit.TabIndex = 13;
-            this.btnDeposit.Text = "Deposit";
-            this.btnDeposit.UseVisualStyleBackColor = false;
+            this.btnCreateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(244)))), ((int)(((byte)(198)))));
+            this.btnCreateAccount.FlatAppearance.BorderSize = 0;
+            this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateAccount.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCreateAccount.Location = new System.Drawing.Point(194, 247);
+            this.btnCreateAccount.Name = "btnCreateAccount";
+            this.btnCreateAccount.Size = new System.Drawing.Size(284, 50);
+            this.btnCreateAccount.TabIndex = 13;
+            this.btnCreateAccount.Text = "Create Account";
+            this.btnCreateAccount.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 132);
+            this.comboBox1.Location = new System.Drawing.Point(147, 134);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(377, 23);
             this.comboBox1.TabIndex = 7;
@@ -77,38 +76,38 @@ namespace WillBank
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(146, 165);
+            this.label2.Location = new System.Drawing.Point(147, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 18);
+            this.label2.Size = new System.Drawing.Size(100, 18);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Enter Amount";
+            this.label2.Text = "Initial Deposit";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(146, 104);
+            this.label1.Location = new System.Drawing.Point(147, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 18);
+            this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Select Account";
+            this.label1.Text = "Account Type";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 193);
+            this.textBox1.Location = new System.Drawing.Point(147, 195);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(377, 42);
             this.textBox1.TabIndex = 9;
             // 
-            // UserControlDeposit
+            // UserControlCreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.Controls.Add(this.panel1);
-            this.Name = "UserControlDeposit";
-            this.Size = new System.Drawing.Size(856, 570);
+            this.Name = "UserControlCreateAccount";
+            this.Size = new System.Drawing.Size(900, 573);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -118,7 +117,7 @@ namespace WillBank
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDeposit;
+        private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
