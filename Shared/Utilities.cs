@@ -20,5 +20,11 @@
             Savings = 1,
             Current = 2
         }
+
+        public class Paths
+        {
+            private readonly string transactionsPath = @"C:\Users\DELL\Desktop\WillBank\WillBank.Store\DataStore\transactions_data.json";
+         
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shared
 {
-    public class Cryptography : ICryptography
+    public class Cryptography
     {
         public string CreateSalt(int size)
         {
